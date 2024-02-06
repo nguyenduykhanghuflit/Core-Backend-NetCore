@@ -9,37 +9,44 @@
 
 # Project structure
 ```
-├───Base.Application
-│   ├───Helpers
-│   ├───Middlewares
-│   ├───Properties
-│   └───UseCases
-│       ├───Auth
-│       ├───GetOptions
-│       ├───SyncAllPerm
-│       └───User
-│           ├───Crud
-│           │   └───Presenter
-│           └───GetCurrentUser
-├───Base.Business
-│   ├───ActionLogics
-│   └───Rules
-├───Base.Core
-│   ├───Database
-│   ├───ExceptionHandle
-│   ├───Migrations
-│   └───Schemas
-├───Base.Services
-│   ├───Base
-├───Base.UnitTest
-│   ├───ControllerTests
-│   │   └───MockData
-│   ├───ServiceTests
-│   │   └───MockData
-│   └───WorkflowTests
-├───Base.Utils
-└───Base.Benchmark
-    ├───Base.BenchmarkDotNet.Artifacts
-    │   └───results
-    └───Services
+```
+📦 
+├─ CoreBackend.Core
+│  ├─ Business
+│  │  └─ Rules
+│  ├─ Interfaces
+│  └─ Model
+│     ├─ ApiResponse.cs
+│     ├─ MailSettings.cs
+│     ├─ RouterModel.cs
+├─ CoreBackend.Repository
+│  └─ Product
+│     └─ ProductRepositories.cs
+├─ CoreBackend.Services
+│  ├─ Facebook
+│  ├─ Instagram
+│  ├─ Telegram
+│  └─ ZNS
+├─ CoreBackend.Utils
+│  ├─ Sql.cs
+│  └─ Utils.cs
+├─ CoreBackend
+│  ├─ Configs
+│  │  └─ GetConfig.cs
+│  ├─ Controllers
+│  │  └─ Content
+│  │     ├─ ContentController.cs
+│  │     ├─ ContentRequest.cs
+│  │     ├─ ContentResponse.cs
+│  │     └─ ContentWorkFlow.cs
+│  ├─ Helpers
+│  │  ├─ ActionFilters
+│  │  ├─ Api
+│  │  ├─ Exceptions
+│  │  ├─ Extensions
+│  │  └─ Middlewares
+│  ├─ Program.cs
+│  ├─ CoreBackend.sln
+└─ README.md
+```
 ```
