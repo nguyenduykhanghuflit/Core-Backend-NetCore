@@ -7,11 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Folder Include="Routers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoreBackend.Core\CoreBackend.Core.csproj" />
+    <ProjectReference Include="..\CoreBackend.Repository\CoreBackend.Repositories.csproj" />
+    <ProjectReference Include="..\CoreBackend.Services\CoreBackend.Services.csproj" />
+    <ProjectReference Include="..\CoreBackend.Utils\CoreBackend.Utils.csproj" />
   </ItemGroup>
 
 </Project>

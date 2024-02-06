@@ -6,4 +6,21 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Authentication\JWT\" />
+    <Folder Include="Authentication\Facebook\" />
+    <Folder Include="Authentication\Github\" />
+    <Folder Include="Authentication\Gmail\" />
+    <Folder Include="Authentication\OAuth\" />
+    <Folder Include="Facebook\Models\" />
+    <Folder Include="Instagram\Models\" />
+    <Folder Include="ChatGPT\" />
+    <Folder Include="Telegram\Models\" />
+    <Folder Include="ZNS\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
+  </ItemGroup>
+
 </Project>

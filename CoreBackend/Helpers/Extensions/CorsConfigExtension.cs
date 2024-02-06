@@ -8,9 +8,12 @@ namespace CoreBackend.Helpers.Extensions
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowAll", x => x.AllowAnyHeader().
-                                                    AllowAnyOrigin().
-                                                    AllowAnyMethod());
+                options.AddPolicy("AllowSpecificOrigins", builder =>
+                {
+                    builder.WithOrigins("https://goldenpos.vn", "http://crm.senvangsolutions.com")
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
+                });
             });
             return services;
         }
