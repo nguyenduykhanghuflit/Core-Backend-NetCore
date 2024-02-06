@@ -9,7 +9,6 @@
 
 # Project structure
 ```
-```
 📦 
 ├─ CoreBackend.Core
 │  ├─ Business
@@ -49,4 +48,4 @@
 │  ├─ CoreBackend.sln
 └─ README.md
 ```
-```
+
