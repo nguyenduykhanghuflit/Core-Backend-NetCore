@@ -1,13 +1,26 @@
-var builder = WebApplication.CreateBuilder(args);
+using CoreBackend.Helpers.Extensions;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+
+#region Service
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.CorsConfig();
+
+builder.Services.SwaggerConfig();
+builder.Services.AddMemoryCache();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+#endregion
+
+
+#region App
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -16,10 +29,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
+app.UseCors("AllowAll");
+//app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
+
+#endregion
