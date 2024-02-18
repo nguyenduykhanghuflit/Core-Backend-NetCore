@@ -2,11 +2,6 @@
 
  update later
 
-
-# Clean architect
-
- update later
-
 # Project structure
 ```
 📦 
